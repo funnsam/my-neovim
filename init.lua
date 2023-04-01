@@ -4,7 +4,7 @@ vim.opt.swapfile = false
 vim.o.tabstop = 4
 vim.o.shiftwidth = 4
 vim.opt.completeopt = {'menuone', 'noselect', 'noinsert'}
-vim.opt.shortmess = vim.opt.shortmess + { c = true}
+vim.opt.shortmess = vim.opt.shortmess + {c = true}
 vim.api.nvim_set_option('updatetime', 300) 
 
 require('plugins')
@@ -30,8 +30,8 @@ require('lualine').setup {
   	sections = {
    		lualine_a = {'mode'},
     	lualine_b = {'branch'},
-   		lualine_c = {'filename'},
-    	lualine_x = {'encoding', 'filetype'},
+   		lualine_c = {'filename', 'diagnostics'},
+    	lualine_x = {'filetype'},
     	lualine_y = {'progress'},
     	lualine_z = {'location'}
   	},
