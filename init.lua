@@ -70,6 +70,10 @@ map('n', '<Space>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
 map('n', '<Space>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
 map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 
+-- File list
+require('nvim-tree').setup()
+map('n', '<C-b>', '<Cmd>NvimTreeToggle<CR>', opts)
+
 -- Theme
 require('onedark').setup = {
 	code_style = {

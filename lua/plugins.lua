@@ -15,4 +15,6 @@ return require('packer').startup(function(use)
 	use 'navarasu/onedark.nvim'
 	
 	use {'neoclide/coc.nvim', branch = 'release'}
+
+	use 'nvim-tree/nvim-tree.lua'
 end)
