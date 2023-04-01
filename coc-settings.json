@@ -1,4 +1,8 @@
 {
 	"suggest.noselect": true,
-	"rust-analyzer.inlayHints.renderColons": false
+	"rust-analyzer.inlayHints.renderColons": false,
+	"rpc.lowerDetailsEditing": "Working on {file_name}: {current_line} / {total_lines}",
+	"rpc.largeImage": "Editing a {Lang} file",
+	"rpc.buttonInactiveLabel": "View my website",
+	"rpc.buttonInactiveUrl": "https://funnsam.github.io"
 }
