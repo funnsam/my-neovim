@@ -25,6 +25,7 @@ vim.cmd([[
 require('lualine').setup {
   	options = {
     	theme = 'onedark',
+		globalstatus = true,
   	},
   	sections = {
    		lualine_a = {'mode'},
@@ -73,6 +74,7 @@ map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 -- File list
 require('nvim-tree').setup()
 map('n', '<C-b>', '<Cmd>NvimTreeToggle<CR>', opts)
+vim.cmd[[NvimTreeOpen]]
 
 -- Theme
 require('onedark').setup = {
