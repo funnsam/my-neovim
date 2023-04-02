@@ -138,3 +138,4 @@ end
 require("toggleterm").setup({
 	shell = shell
 })
+vim.cmd("ToggleTerm size=7")
