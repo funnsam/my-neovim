@@ -129,3 +129,12 @@ vim.api.nvim_create_autocmd("CursorHold", {
 
 -- Symbol renaming
 keyset("n", "<F2>", "<Plug>(coc-rename)", {silent = true})
+
+-- Terminal
+local shell = vim.o.shell;
+if vim.loop.os_uname().sysname == "Linux" then
+	shell = "/usr/bin/bash"
+end
+require("toggleterm").setup({
+	shell = shell
+})
