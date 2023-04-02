@@ -21,31 +21,27 @@ vim.cmd([[
 	autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
--- Lua Line
+-- Status bar
+local a = { left = '', right = '' }
+local b = { left = '', right = '' }
 require('lualine').setup {
   	options = {
     	theme = 'onedark',
 		globalstatus = true,
+    	component_separators = '|',
+	    section_separators = a,
   	},
   	sections = {
-   		lualine_a = {'mode'},
-    	lualine_b = {'branch'},
-   		lualine_c = {'filename', 'diagnostics'},
-    	lualine_x = {'filetype'},
-    	lualine_y = {'progress'},
-    	lualine_z = {'location'}
-  	},
-  	inactive_sections = {
-    	lualine_a = {},
-    	lualine_b = {},
-    	lualine_c = {'filename'},
-    	lualine_x = {'location'},
-	    lualine_y = {},
-    	lualine_z = {}
+   		lualine_a = {{'mode' 	, separator = b}},
+    	lualine_b = {{'branch' 	}},
+   		lualine_c = {{'filename', 'diagnostics'}},
+    	lualine_x = {{'diff', 'filetype'}},
+    	lualine_y = {{'progress'}},
+    	lualine_z = {{'location', separator = b}}
   	},
 }
 
--- Bar Bar
+-- Tab list
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
@@ -74,7 +70,7 @@ map('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 -- File list
 require('nvim-tree').setup()
 map('n', '<C-b>', '<Cmd>NvimTreeToggle<CR>', opts)
-vim.cmd[[NvimTreeOpen]]
+vim.cmd('NvimTreeOpen')
 
 -- Theme
 require('onedark').setup = {
@@ -84,6 +80,12 @@ require('onedark').setup = {
 	}
 }
 require('onedark').load()
+
+-- Shade
+require('shade').setup({
+  	overlay_opacity = 35
+})
+
 
 -- Coc
 local keyset = vim.keymap.set
@@ -123,9 +125,4 @@ vim.api.nvim_create_autocmd("CursorHold", {
 })
 
 -- Symbol renaming
-keyset("n", "<leader>rn", "<Plug>(coc-rename)", {silent = true})
-
-
--- Formatting selected code
-keyset("x", "<leader>f", "<Plug>(coc-format-selected)", {silent = true})
-keyset("n", "<leader>f", "<Plug>(coc-format-selected)", {silent = true})
+keyset("n", "<F2>", "<Plug>(coc-rename)", {silent = true})

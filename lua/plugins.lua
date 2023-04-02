@@ -13,4 +13,6 @@ return require('packer').startup(function(use)
 	use {'neoclide/coc.nvim', branch = 'release'}
 
 	use 'nvim-tree/nvim-tree.lua'
+
+	use 'sunjon/shade.nvim'
 end)
