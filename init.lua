@@ -84,12 +84,6 @@ require("onedark").setup = {
 }
 require("onedark").load()
 
--- Shade
-require("shade").setup({
-  	overlay_opacity = 35
-})
-
-
 -- Coc
 local keyset = vim.keymap.set
 -- Autocomplete

@@ -9,8 +9,6 @@ return require("packer").startup(function(use)
 
 	use "nvim-tree/nvim-tree.lua"
 
-	use "sunjon/shade.nvim"
-
 	use {
   		"utilyre/barbecue.nvim",
   		tag = "*",
