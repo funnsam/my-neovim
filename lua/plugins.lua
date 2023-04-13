@@ -20,5 +20,5 @@ return require("packer").startup(function(use)
 
 	use "akinsho/toggleterm.nvim"
 	use "mg979/vim-visual-multi"
-	use "cheap-glitch/vim-v"
+	use "ollykel/v-vim"
 end)
