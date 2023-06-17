@@ -18,6 +18,13 @@ return require("packer").startup(function(use)
  		},
 	}
 
+	use {
+		"folke/todo-comments.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim"
+		},
+	}
+
 	use "akinsho/toggleterm.nvim"
 	use "mg979/vim-visual-multi"
 	use "ollykel/v-vim"

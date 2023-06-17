@@ -132,4 +132,8 @@ end
 require("toggleterm").setup({
 	shell = shell
 })
-vim.cmd("ToggleTerm size=7")
+keyset("n", "<C-C>", "<CMD>ToggleTerm size=7<CR>", {silent = true})
+
+-- Todo comments
+require("todo-comments").setup({
+})
