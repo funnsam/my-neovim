@@ -142,3 +142,10 @@ keyset("n", "<C-C>", "<CMD>ToggleTerm size=7<CR>", {silent = true})
 -- Todo comments
 require("todo-comments").setup({
 })
+
+-- Column colors
+keyset("n", ".", "<CMD>set cc=<CR>", {silent = true})
+keyset("n", ",", "<CMD>set cc=100<CR>", {silent = true})
+vim.cmd([[
+	highlight ColorColumn guibg=Red
+]])
