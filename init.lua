@@ -26,6 +26,15 @@ vim.cmd([[
 	autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
+-- Theme
+require("onedark").setup = {
+	code_style = {
+		functions = "bold",
+		comments = "none"
+	}
+}
+require("onedark").load()
+
 -- Depth bar
 require("barbecue").setup()
 
@@ -50,6 +59,13 @@ require("lualine").setup {
 }
 
 -- Tab list
+require("barbar").setup {
+	icons = {
+		button = "󰅖",
+		pinned = { button = "󰐃", filename = true }
+	}
+}
+
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
@@ -79,15 +95,6 @@ map("n", "<Space>bw", "<Cmd>BufferOrderByWindowNumber<CR>", opts)
 require("nvim-tree").setup()
 map("n", "<C-b>", "<Cmd>NvimTreeToggle<CR>", opts)
 vim.cmd("NvimTreeOpen")
-
--- Theme
-require("onedark").setup = {
-	code_style = {
-		functions = "bold",
-		comments = "none"
-	}
-}
-require("onedark").load()
 
 -- Coc
 local keyset = vim.keymap.set
