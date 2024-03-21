@@ -26,6 +26,13 @@ vim.cmd([[
 	autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
+vim.cmd([[
+	map <MiddleMouse> <Nop>
+	imap <MiddleMouse> <Nop>
+	map <2-MiddleMouse> <Nop>
+	imap <2-MiddleMouse> <Nop>
+]])
+
 -- Theme
 require("onedark").setup = {
 	code_style = {
