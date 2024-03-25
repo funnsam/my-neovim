@@ -155,6 +155,9 @@ keyset("n", "<C-C>", "<CMD>ToggleTerm size=7<CR>", {silent = true})
 
 -- Todo comments
 require("todo-comments").setup({
+	keywords = {
+		LIGHT = { icon = "", color = "#FFFFFF" }
+	}
 })
 
 -- Column colors
