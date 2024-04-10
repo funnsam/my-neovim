@@ -34,7 +34,7 @@ vim.cmd([[
 ]])
 
 -- Theme
-require("onedark").setup = {
+require("onedark").setup {
 	code_style = {
 		functions = "bold",
 		comments = "none"
