@@ -36,7 +36,6 @@ vim.cmd([[
 -- Theme
 require("onedark").setup {
 	code_style = {
-		functions = "bold",
 		comments = "none"
 	}
 }
