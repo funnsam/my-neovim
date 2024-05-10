@@ -9,7 +9,7 @@ vim.api.nvim_set_option("updatetime", 300)
 
 vim.cmd([[
 	set list
-	set lcs=tab:\ \ ,trail:_
+	set lcs=tab:󰌒\ ,trail:_
 ]])
 
 require("plugins")
