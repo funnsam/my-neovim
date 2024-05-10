@@ -3,7 +3,7 @@ return require("packer").startup(function(use)
 	use "nvim-lualine/lualine.nvim"
 	use "nvim-tree/nvim-web-devicons"
 	use "romgrk/barbar.nvim"
-	use "navarasu/onedark.nvim"
+	use "catppuccin/nvim"
 	
 	use {"neoclide/coc.nvim", branch = "release"}
 
@@ -14,7 +14,7 @@ return require("packer").startup(function(use)
   		tag = "*",
   		requires = {
     		"SmiteshP/nvim-navic",
-    		"nvim-tree/nvim-web-devicons", -- optional dependency
+    		"nvim-tree/nvim-web-devicons",
  		},
 	}
 

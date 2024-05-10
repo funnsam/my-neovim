@@ -34,22 +34,31 @@ vim.cmd([[
 ]])
 
 -- Theme
-require("onedark").setup {
-	code_style = {
-		comments = "none"
-	}
-}
-require("onedark").load()
+require("catppuccin").setup({
+	flavour = "frappe",
+	styles = {
+		comments = {},
+	},
+	integrations = {
+		barbar = true,
+		coc_nvim = true,
+		nvimtree = true,
+	},
+})
+
+vim.cmd.colorscheme "catppuccin"
 
 -- Depth bar
-require("barbecue").setup()
+require("barbecue").setup {
+	theme = "catppuccin",
+}
 
 -- Status bar
 local a = { left = "", right = "" }
 local b = { left = "", right = "" }
 require("lualine").setup {
 	options = {
-		theme = "onedark",
+		theme = "catppuccin",
 		globalstatus = true,
 		component_separators = "|",
 		section_separators = a,
