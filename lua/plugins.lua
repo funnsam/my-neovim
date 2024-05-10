@@ -3,19 +3,19 @@ return require("packer").startup(function(use)
 	use "nvim-lualine/lualine.nvim"
 	use "nvim-tree/nvim-web-devicons"
 	use "romgrk/barbar.nvim"
-	use "catppuccin/nvim"
-	
+	use "navarasu/onedark.nvim"
+
 	use {"neoclide/coc.nvim", branch = "release"}
 
 	use "nvim-tree/nvim-tree.lua"
 
 	use {
-  		"utilyre/barbecue.nvim",
-  		tag = "*",
-  		requires = {
-    		"SmiteshP/nvim-navic",
-    		"nvim-tree/nvim-web-devicons",
- 		},
+		"utilyre/barbecue.nvim",
+		tag = "*",
+		requires = {
+			"SmiteshP/nvim-navic",
+			"nvim-tree/nvim-web-devicons",
+		},
 	}
 
 	use {

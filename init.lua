@@ -9,7 +9,7 @@ vim.api.nvim_set_option("updatetime", 300)
 
 vim.cmd([[
 	set list
-	set lcs=tab:→\ ,space:·,trail:#
+	set lcs=tab:\ \ ,trail:_
 ]])
 
 require("plugins")
@@ -34,31 +34,24 @@ vim.cmd([[
 ]])
 
 -- Theme
-require("catppuccin").setup({
-	flavour = "frappe",
-	styles = {
-		comments = {},
-	},
-	integrations = {
-		barbar = true,
-		coc_nvim = true,
-		nvimtree = true,
-	},
-})
-
-vim.cmd.colorscheme "catppuccin"
+require("onedark").setup {
+	code_style = {
+		comments = "none"
+	}
+}
+require("onedark").load()
 
 -- Depth bar
 require("barbecue").setup {
-	theme = "catppuccin",
+	theme = "oh-lucy",
 }
 
 -- Status bar
-local a = { left = "", right = "" }
-local b = { left = "", right = "" }
+local a = { left = "", right = "" }
+local b = { right = a.left }
 require("lualine").setup {
 	options = {
-		theme = "catppuccin",
+		theme = "oh-lucy",
 		globalstatus = true,
 		component_separators = "|",
 		section_separators = a,
@@ -69,7 +62,7 @@ require("lualine").setup {
 		lualine_c = {{"filename"}, {"diagnostics"}},
 		lualine_x = {{"diff"}, {"filetype"}},
 		lualine_y = {{"progress"}},
-		lualine_z = {{"location", separator = b}}
+		lualine_z = {{"location"}}
 	},
 }
 
