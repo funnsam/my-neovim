@@ -1,31 +1,46 @@
 return require("packer").startup(function(use)
-	use "wbthomason/packer.nvim"
-	use "nvim-lualine/lualine.nvim"
-	use "nvim-tree/nvim-web-devicons"
-	use "romgrk/barbar.nvim"
-	use "navarasu/onedark.nvim"
+    use "wbthomason/packer.nvim"
+    use "nvim-tree/nvim-web-devicons"
 
-	use {"neoclide/coc.nvim", branch = "release"}
+    use "nvim-lualine/lualine.nvim" -- status bar
+    use "romgrk/barbar.nvim" -- tabs
+    use "navarasu/onedark.nvim" -- theme
 
-	use "nvim-tree/nvim-tree.lua"
+    -- use {"neoclide/coc.nvim", branch = "release"}
 
-	use {
-		"utilyre/barbecue.nvim",
-		tag = "*",
-		requires = {
-			"SmiteshP/nvim-navic",
-			"nvim-tree/nvim-web-devicons",
-		},
-	}
+    use "nvim-tree/nvim-tree.lua" -- file tree
 
-	use {
-		"folke/todo-comments.nvim",
-		requires = {
-			"nvim-lua/plenary.nvim"
-		},
-	}
+    use {
+        "utilyre/barbecue.nvim", -- location bar
+        tag = "*",
+        requires = {
+            "SmiteshP/nvim-navic",
+            "nvim-tree/nvim-web-devicons",
+        },
+    }
 
-	use "akinsho/toggleterm.nvim"
-	use "mg979/vim-visual-multi"
-	use "ollykel/v-vim"
+    use {
+        "folke/todo-comments.nvim", -- fancy comments
+        requires = {
+            "nvim-lua/plenary.nvim"
+        },
+    }
+
+    use "akinsho/toggleterm.nvim" -- terminal
+    use "mg979/vim-visual-multi" -- idk
+    use "ollykel/v-vim"
+
+    use "williamboman/mason.nvim" -- LSPs
+    use "neovim/nvim-lspconfig" -- lsp config
+    use "williamboman/mason-lspconfig.nvim" -- mason lsp shit
+
+    use "hrsh7th/nvim-cmp" -- autocomplete
+    use "hrsh7th/cmp-nvim-lsp"
+    use "hrsh7th/cmp-buffer"
+    use "hrsh7th/cmp-path"
+    use "hrsh7th/cmp-cmdline"
+    use "hrsh7th/cmp-vsnip"
+    use "hrsh7th/vim-vsnip"
+
+    use "andweeb/presence.nvim" -- discord
 end)

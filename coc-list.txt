@@ -1,1 +1,0 @@
-coc-discord-rpc coc-rust-analyzer coc-json
