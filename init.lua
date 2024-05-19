@@ -10,7 +10,7 @@ vim.api.nvim_set_option("updatetime", 300)
 
 vim.cmd([[
     set list
-    set lcs=leadmultispace:│\ \ \ ,trail:_,tab:@@
+    set lcs=leadmultispace:│\ \ \ ,trail:_,tab:│\ 
 ]])
 
 require("plugins")
@@ -93,7 +93,7 @@ map("n", "<A-8>", "<Cmd>BufferGoto 8<CR>", opts)
 map("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
 map("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
 map("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
-map("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
+map("n", "<A-q>", "<Cmd>BufferClose<CR>", opts)
 map("n", "<C-p>", "<Cmd>BufferPick<CR>", opts)
 map("n", "<Space>bb", "<Cmd>BufferOrderByBufferNumber<CR>", opts)
 map("n", "<Space>bd", "<Cmd>BufferOrderByDirectory<CR>", opts)
