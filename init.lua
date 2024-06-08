@@ -170,6 +170,10 @@ require("lspconfig").html.setup({
     capabilities = capabilities,
 })
 
+require("lspconfig").tsserver.setup({
+    capabilities = capabilities,
+})
+
 for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
     vim.api.nvim_set_hl(0, group, {})
 end
