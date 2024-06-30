@@ -27,7 +27,7 @@ return require("packer").startup(function(use)
     }
 
     use "akinsho/toggleterm.nvim" -- terminal
-    use "mg979/vim-visual-multi" -- idk
+    use "mg979/vim-visual-multi" -- multi-cursor
     use "ollykel/v-vim"
 
     use "williamboman/mason.nvim" -- LSPs
@@ -43,4 +43,6 @@ return require("packer").startup(function(use)
     use "hrsh7th/vim-vsnip"
 
     use "andweeb/presence.nvim" -- discord
+
+    use "RaafatTurki/hex.nvim" -- hex editor
 end)

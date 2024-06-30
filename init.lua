@@ -182,3 +182,7 @@ end
 require("presence").setup({
     main_image = "file",
 })
+
+-- hex editor
+require("hex").setup()
+vim.api.nvim_set_keymap("n", "<C-x>", "", { noremap = true, silent = true, callback = require("hex").toggle })
