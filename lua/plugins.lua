@@ -4,9 +4,7 @@ return require("packer").startup(function(use)
 
     use "nvim-lualine/lualine.nvim" -- status bar
     use "romgrk/barbar.nvim" -- tabs
-    use "navarasu/onedark.nvim" -- theme
-
-    -- use {"neoclide/coc.nvim", branch = "release"}
+    use { "catppuccin/nvim", as = "catppuccin" } -- theme
 
     use "nvim-tree/nvim-tree.lua" -- file tree
 

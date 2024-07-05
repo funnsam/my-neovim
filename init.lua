@@ -35,16 +35,33 @@ vim.cmd([[
 ]])
 
 -- theme
-require("onedark").setup {
-    code_style = {
-        comments = "none"
-    }
-}
-require("onedark").load()
+require("catppuccin").setup({
+    flavour = "macchiato",
+    term_colors = true,
+    styles = {
+        comments = {},
+        conditionals = {},
+    },
+    integrations = {
+        barbar = true,
+        barbecue = {},
+        mason = true,
+        native_lsp = {
+            virtual_text = {
+                errors = {},
+                hints = {},
+                warnings = {},
+                information = {},
+                ok = {},
+            },
+        },
+    },
+})
+vim.cmd.colorscheme "catppuccin"
 
 -- location bar
 require("barbecue").setup {
-    theme = "onedark",
+    theme = "catppuccin",
 }
 
 -- status bar
@@ -52,7 +69,7 @@ local a = { left = "", right = "" }
 local b = { right = a.left }
 require("lualine").setup {
     options = {
-        theme = "onedark",
+        theme = "catppuccin",
         globalstatus = true,
         component_separators = "|",
         section_separators = a,
