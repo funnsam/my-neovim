@@ -43,4 +43,6 @@ return require("packer").startup(function(use)
     use "andweeb/presence.nvim" -- discord
 
     use "RaafatTurki/hex.nvim" -- hex editor
+
+    use "tikhomirov/vim-glsl" -- highlights
 end)
