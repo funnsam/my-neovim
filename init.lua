@@ -4,8 +4,8 @@ vim.opt.swapfile = false
 vim.o.tabstop = 4
 vim.o.expandtab = true
 vim.o.shiftwidth = 4
-vim.opt.completeopt = {"menuone", "noselect", "noinsert"}
-vim.opt.shortmess = vim.opt.shortmess + {c = true}
+vim.opt.completeopt = { "menuone", "noselect", "noinsert" }
+vim.opt.shortmess = vim.opt.shortmess + { c = true }
 vim.api.nvim_set_option("updatetime", 300)
 
 vim.cmd([[
@@ -75,7 +75,7 @@ require("lualine").setup {
         section_separators = a,
     },
     sections = {
-        lualine_a = {{"mode", separator = b}},
+        lualine_a = {{ "mode", separator = b }},
         lualine_b = {{"branch"}},
         lualine_c = {{"filename"}, {"diagnostics"}},
         lualine_x = {{"diff"}, {"filetype"}},
@@ -132,7 +132,12 @@ require("toggleterm").setup({
     shell = shell
 })
 
-vim.keymap.set("n", "<C-C>", "<CMD>ToggleTerm size=7<CR>", { silent = true })
+vim.keymap.set("n", "<C-C>", "<CMD>ToggleTerm size=14<CR>", { silent = true })
+vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
+
+function _G.set_terminal_keymaps()
+    vim.keymap.set("t", "<esc>", "<C-\\><C-n>", { buffer = 0 })
+end
 
 -- Todo comments
 require("todo-comments").setup({
@@ -142,8 +147,8 @@ require("todo-comments").setup({
 })
 
 -- column colors
-vim.keymap.set("n", ".", "<CMD>set cc=<CR>", {silent = true})
-vim.keymap.set("n", ",", "<CMD>set cc=100<CR>", {silent = true})
+vim.keymap.set("n", ".", "<CMD>set cc=<CR>", { silent = true })
+vim.keymap.set("n", ",", "<CMD>set cc=100<CR>", { silent = true })
 vim.cmd([[
     highlight ColorColumn guibg=#e86671
 ]])
