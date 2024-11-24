@@ -118,9 +118,7 @@ map("n", "<Space>bl", "<Cmd>BufferOrderByLanguage<CR>", opts)
 map("n", "<Space>bw", "<Cmd>BufferOrderByWindowNumber<CR>", opts)
 
 -- file tree
-require("nvim-tree").setup({
-    git = { enable = false }
-})
+require("nvim-tree").setup()
 map("n", "<C-b>", "<Cmd>NvimTreeToggle<CR>", opts)
 vim.cmd("NvimTreeOpen")
 
