@@ -118,7 +118,9 @@ map("n", "<Space>bl", "<Cmd>BufferOrderByLanguage<CR>", opts)
 map("n", "<Space>bw", "<Cmd>BufferOrderByWindowNumber<CR>", opts)
 
 -- file tree
-require("nvim-tree").setup()
+require("nvim-tree").setup({
+    git = { enable = false }
+})
 map("n", "<C-b>", "<Cmd>NvimTreeToggle<CR>", opts)
 vim.cmd("NvimTreeOpen")
 
@@ -132,12 +134,12 @@ require("toggleterm").setup({
     shell = shell
 })
 
-vim.keymap.set("n", "<C-C>", "<CMD>ToggleTerm size=7<CR>", {silent = true})
+vim.keymap.set("n", "<C-C>", "<CMD>ToggleTerm size=7<CR>", { silent = true })
 
 -- Todo comments
 require("todo-comments").setup({
     keywords = {
-        LIGHT = { icon = "", color = "#abb2bf" }
+        LIGHT = { icon = "", color = "#b8c0e0" }
     }
 })
 
