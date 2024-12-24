@@ -34,6 +34,17 @@ vim.cmd([[
     imap <2-MiddleMouse> <Nop>
 ]])
 
+vim.fn.digraph_setlist({
+    {"ns", "ₙ"},
+    {"is", "ᵢ"},
+    {"js", "ⱼ"},
+    {"ks", "ₖ"},
+    {"nS", "ⁿ"},
+    {"iS", "ᶦ"},
+    {"jS", "ʲ"},
+    {"kS", "ᵏ"},
+})
+
 -- theme
 require("catppuccin").setup({
     flavour = "macchiato",
@@ -192,7 +203,7 @@ require("lspconfig").html.setup({
     capabilities = capabilities,
 })
 
-require("lspconfig").tsserver.setup({
+require("lspconfig").ts_ls.setup({
     capabilities = capabilities,
 })
 
