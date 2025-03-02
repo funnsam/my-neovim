@@ -5,13 +5,11 @@ return {
         opts = {},
     },
     {
-        "williamboman/mason-lspconfig.nvim",
-        priority = 998,
-        opts = {},
-    },
-    {
         "neovim/nvim-lspconfig",
-        dependencies = { "hrsh7th/cmp-nvim-lsp" },
+        dependencies = {
+            "hrsh7th/cmp-nvim-lsp",
+            "williamboman/mason-lspconfig.nvim"
+        },
         config = function()
             local capabilities = require("cmp_nvim_lsp").default_capabilities()
             local lspconfig = require("lspconfig")

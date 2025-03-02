@@ -12,7 +12,7 @@ vim.opt.swapfile = false
 vim.opt.updatetime = 300
 
 vim.cmd.set("list")
-vim.opt.listchars = [[leadmultispace:│\ \ \ ,trail:_,tab:│\ ]]
+vim.opt.listchars = [[leadmultispace:│   ,trail:_,tab:│ ]]
 
 vim.keymap.set("n", ".", "<CMD>set cc=<CR>", { silent = true })
 vim.keymap.set("n", ",", "<CMD>set cc=100<CR>", { silent = true })
