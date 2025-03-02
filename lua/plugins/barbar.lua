@@ -25,6 +25,7 @@ map("n", "<Space>bw", "<Cmd>BufferOrderByWindowNumber<CR>", opts)
 
 return {
     "romgrk/barbar.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     opts = {
         icons = {
             button = "󰅖",

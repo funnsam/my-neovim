@@ -1,6 +1,14 @@
 return {
-    { "williamboman/mason.nvim", opts = {} },
-    { "williamboman/mason-lspconfig.nvim", opts = {} },
+    {
+        "williamboman/mason.nvim",
+        priority = 999,
+        opts = {},
+    },
+    {
+        "williamboman/mason-lspconfig.nvim",
+        priority = 998,
+        opts = {},
+    },
     {
         "neovim/nvim-lspconfig",
         dependencies = { "hrsh7th/cmp-nvim-lsp" },
