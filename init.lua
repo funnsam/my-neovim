@@ -19,5 +19,10 @@ vim.keymap.set("n", ",", "<CMD>set cc=100<CR>", { silent = true })
 vim.cmd.highlight("ColorColumn guibg=#e86671")
 
 require("config.lazy")
-
 vim.cmd.colorscheme("catppuccin")
+
+-- disable lsp highlight
+vim.api.nvim_set_hl(0, '@lsp.type.function', {})
+for _, group in ipairs(vim.fn.getcompletion("@lsp", "highlight")) do
+    vim.api.nvim_set_hl(0, group, {})
+end
