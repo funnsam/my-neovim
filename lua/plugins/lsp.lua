@@ -16,6 +16,13 @@ return {
 
             lspconfig.rust_analyzer.setup({
                 capabilities = capabilities,
+                settings = {
+                    ["rust-analyzer"] = {
+                        cargo = {
+                            features = "all",
+                        },
+                    },
+                },
             })
 
             lspconfig.html.setup({

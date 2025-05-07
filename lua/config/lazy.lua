@@ -24,7 +24,7 @@ require("lazy").setup({
         { import = "plugins" },
     },
     install = {
-        colorscheme = { "catppuccin" }
+        colorscheme = { "doom-one" }
     },
     checker = { enabled = true },
 })
