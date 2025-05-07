@@ -24,7 +24,7 @@ require("lazy").setup({
         { import = "plugins" },
     },
     install = {
-        colorscheme = { "doom-one" }
+        colorscheme = { "github_dark_default" }
     },
     checker = { enabled = true },
 })
