@@ -32,6 +32,8 @@ return {
             lspconfig.ts_ls.setup({
                 capabilities = capabilities,
             })
+
+            vim.lsp.inlay_hint.enable(true)
         end,
     }
 }
