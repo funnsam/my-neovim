@@ -24,7 +24,7 @@ require("lazy").setup({
         { import = "plugins" },
     },
     install = {
-        colorscheme = { "github_dark_default" }
+        colorscheme = { "tokyonight-dark" },
     },
     checker = { enabled = true },
 })

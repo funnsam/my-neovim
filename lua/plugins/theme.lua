@@ -1,9 +1,15 @@
 return {
-    "projekt0n/github-nvim-theme",
-    name = "github-theme",
+    "folke/tokyonight.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-        vim.cmd.colorscheme("github_dark_default")
+        require("tokyonight").setup({
+            style = "night",
+            styles = {
+                keywords = { italic = true },
+            },
+        })
+
+        vim.cmd.colorscheme("tokyonight")
     end,
 }
