@@ -11,10 +11,11 @@ return {
             "williamboman/mason-lspconfig.nvim"
         },
         config = function()
-            local capabilities = require("cmp_nvim_lsp").default_capabilities()
-            local lspconfig = require("lspconfig")
+            vim.lsp.config("*", {
+                capabilities = require("cmp_nvim_lsp").default_capabilities(),
+            })
 
-            lspconfig.rust_analyzer.setup({
+            vim.lsp.config("rust_analyzer", {
                 capabilities = capabilities,
                 settings = {
                     ["rust-analyzer"] = {
@@ -25,15 +26,11 @@ return {
                 },
             })
 
-            lspconfig.html.setup({
+            vim.lsp.config("ts_ls", {
                 capabilities = capabilities,
             })
 
-            lspconfig.ts_ls.setup({
-                capabilities = capabilities,
-            })
-
-            lspconfig.zls.setup({
+            vim.lsp.config("zls", {
                 settings = {
                     zls = {
                         semantic_tokens = "partial",
