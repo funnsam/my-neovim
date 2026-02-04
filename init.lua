@@ -25,7 +25,7 @@ vim.opt.swapfile = false
 vim.opt.updatetime = 300
 
 vim.cmd.set("list")
-vim.opt.listchars = [[leadmultispace: │  ,trail:_,tab:│ ]]
+vim.opt.listchars = [[leadmultispace:>   ,trail:_,tab:│ ]]
 
 require("config.lazy")
 

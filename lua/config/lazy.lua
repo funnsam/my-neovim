@@ -26,5 +26,4 @@ require("lazy").setup({
     install = {
         colorscheme = { "grass" },
     },
-    checker = { enabled = true },
 })
