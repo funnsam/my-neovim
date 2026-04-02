@@ -14,9 +14,11 @@ return {
             vim.lsp.config("*", {
                 capabilities = require("cmp_nvim_lsp").default_capabilities(),
             })
+            require("mason-lspconfig").setup({
+                automatic_setup = true,
+            })
 
             vim.lsp.config("rust_analyzer", {
-                capabilities = capabilities,
                 settings = {
                     ["rust-analyzer"] = {
                         cargo = {
@@ -24,10 +26,6 @@ return {
                         },
                     },
                 },
-            })
-
-            vim.lsp.config("ts_ls", {
-                capabilities = capabilities,
             })
 
             vim.lsp.config("zls", {
@@ -48,6 +46,9 @@ return {
             })
 
             vim.lsp.inlay_hint.enable(true)
+            vim.keymap.set("n", "<leader>lh", function()
+                vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
+            end)
         end,
     }
 }
