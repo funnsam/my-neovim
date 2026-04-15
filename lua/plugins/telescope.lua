@@ -11,5 +11,6 @@ return {
         vim.keymap.set("n", "<leader>fg", builtin.live_grep, { noremap = true, silent = true })
         vim.keymap.set("n", "<leader>fi", builtin.lsp_implementations, { noremap = true, silent = true })
         vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { noremap = true, silent = true })
+        vim.keymap.set("n", "<leader>fr", builtin.resume, { noremap = true, silent = true })
     end,
 }
